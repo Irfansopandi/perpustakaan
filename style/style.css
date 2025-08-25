@@ -1,0 +1,76 @@
+/* body {
+  min-height: 2000px;
+} */
+
+.navbar .navbar-brand {
+  font-family: "Viga", sans-serif;
+  font-weight: 300;
+}
+
+.navbar .navbar-nav {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.jumbotron {
+  background-image: url(../img/jumbotron.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.jumbotron .container {
+  position: sticky;
+  top: 40%; /* posisinya tetap di tengah saat scroll */
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+  bottom: 0;
+}
+
+.jumbotron .display-4 {
+  font-family: "Viga", sans-serif;
+  color: white;
+  margin-top: 150px;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+.jumbotron .lead {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+/* tentang */
+.tentang .container .lead {
+  text-align: justify;
+}
+.tentang .container,
+.layanan .container,
+.koleksi .container {
+  padding: 80px;
+}
+
+/* layanan */
+.layanan-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}

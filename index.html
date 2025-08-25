@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perpustakaan</title>
+    <!-- bootsrep -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- my font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Viga&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-lg bg-secondary shadow p-3 mb-5 fixed-top"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand fs-4" href="#">Perpustakaan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto fs-5">
+            <a class="nav-link active mx-3" aria-current="page" href="#"
+              >Home</a
+            >
+            <a class="nav-link mx-3" href="#tentang">Tentang</a>
+            <a class="nav-link mx-3" href="#layanan">Layanan</a>
+            <a class="nav-link mx-3" href="#koleksi">Koleksi</a>
+            <a class="nav-link mx-3" href="#kontak">Kontak</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- jumbotron -->
+
+    <div class="jumbotron jumbotron-fluid text-center py-5 mt-5">
+      <div class="container">
+        <h1 class="display-4">Selamat Belajar</h1>
+        <p class="lead text-center">
+          Mari manfaatkan koleksi perpustakaan untuk menambah ilmu dan meraih
+          masa depan yang lebih cerah.📚
+        </p>
+      </div>
+    </div>
+
+    <!-- tentang -->
+    <section
+      class="tentang py-5 text-light"
+      style="background-color: #6c757d"
+      id="tentang"
+    >
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Tentang Perpustakaan</h2>
+        <p class="lead text-justify">
+          Perpustakaan kami menyediakan koleksi buku dan literatur digital untuk
+          mendukung belajar, riset, dan pengembangan diri. Dengan suasana yang
+          nyaman, pengunjung dapat membaca, berdiskusi, serta menemukan
+          inspirasi baru setiap harinya.
+        </p>
+      </div>
+    </section>
+
+    <!-- layanan -->
+    <section
+      id="layanan"
+      class="layanan py-5 text-light"
+      style="background-color: #6c757d"
+    >
+      <div class="container">
+        <h2 class="fw-bold text-center mb-4 layanan-title">
+          Layanan Perpustakaan
+        </h2>
+        <div class="row text-center layanan-card mb-10">
+          <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+              <h5>Peminjaman</h5>
+              <p>Peminjaman & pengembalian buku dengan mudah.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+              <h5>Keanggotaan</h5>
+              <p>Daftar sebagai anggota untuk akses penuh.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+              <h5>E-Book</h5>
+              <p>Akses koleksi e-book & jurnal online.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+              <h5>Ruang Baca</h5>
+              <p>Ruang baca nyaman & ruang diskusi mahasiswa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOLEKSI -->
+    <section id="koleksi" class="koleksi py-5">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-4">Koleksi Populer</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://picsum.photos/200/300?random=1"
+                class="card-img-top"
+                alt="Buku 1"
+              />
+              <div class="card-body">
+                <h6 class="card-title">Buku 1</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://picsum.photos/200/300?random=2"
+                class="card-img-top"
+                alt="Buku 2"
+              />
+              <div class="card-body">
+                <h6 class="card-title">Buku 2</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://picsum.photos/200/300?random=3"
+                class="card-img-top"
+                alt="Buku 3"
+              />
+              <div class="card-body">
+                <h6 class="card-title">Buku 3</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://picsum.photos/200/300?random=4"
+                class="card-img-top"
+                alt="Buku 4"
+              />
+              <div class="card-body">
+                <h6 class="card-title">Buku 4</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-5 bg-light kontak">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Kontak</h2>
+        <p>📍 Jl. Kampus No. 123, Karawang</p>
+        <p>📞 0812-3456-7890</p>
+        <p>✉️ email@perpus.ac.id</p>
+        <p>Jam Operasional: Senin - Jumat (08:00 - 16:00)</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white text-center p-3">
+      <small>&copy; 2025 Perpustakaan UBSI. All Rights Reserved.</small>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
