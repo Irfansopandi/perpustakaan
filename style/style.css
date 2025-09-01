@@ -1,6 +1,7 @@
 html {
   scroll-padding-top: 90px;
 }
+
 /* navbar */
 .navbar .navbar-brand {
   font-family: "Viga", sans-serif;
@@ -26,7 +27,7 @@ html {
 
 .jumbotron .container {
   position: relative;
-  top: 20%; /* posisinya tetap di tengah saat scroll */
+  top: 20%;
   text-align: center;
   color: white;
   z-index: 1;
@@ -58,16 +59,23 @@ html {
   letter-spacing: 2px;
 }
 
+/* Container padding - Desktop */
 .tentang .container,
 .layanan .container,
 .koleksi .container {
-  padding: 80px;
+  padding: 80px 80px;
+}
+
+/* Pastikan tidak ada horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* layanan */
-/* .layanan.container {
-  padding: 100px;
-} */
 .layanan-title {
   font-weight: bold;
   margin-bottom: 10px;
@@ -83,7 +91,6 @@ html {
 }
 
 .koleksi img {
-  /* width: 100%; */
   height: 50%;
 }
 
@@ -100,8 +107,6 @@ html {
 /* koleksi */
 .koleksi .card {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.558);
-}
-.koleksi .card {
   transition: transform 0.3s ease;
 }
 
@@ -114,11 +119,52 @@ html {
   margin-bottom: 10px;
 }
 
-/* tim */
-.tim {
-  margin-top: 80px;
+/* Contact section */
+#kontak .container {
+  padding: 80px;
 }
-/* destop */
+
+/* FAQ */
+
+.accordion-body a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.accordion-body a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.accordion-body a[target="_blank"]:after {
+  content: " ";
+  font-size: 12px;
+}
+/* Google Maps responsive fix */
+.map-container {
+  width: 100%;
+  height: 450px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Form input styling - Lebih besar di desktop */
+.form-control-lg {
+  font-size: 1.1rem;
+  padding: 15px 20px;
+}
+
+/* desktop */
 @media (min-width: 992px) {
   .navbar .nav-link {
     position: relative;
@@ -140,43 +186,202 @@ html {
   .navbar .nav-link:hover::after {
     width: 100%;
   }
+
+  .form-control-lg {
+    font-size: 1.25rem;
+    padding: 18px 25px;
+    min-height: 65px;
+  }
+
+  .form-control.h-100 {
+    min-height: 300px !important;
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  .map-container iframe {
+    min-height: 450px !important;
+  }
 }
-/* phone */
-@media (max-width: 747px) {
-  .jumbotron .lead {
-    font-size: 10px;
-    font-weight: 100;
-    text-align: center;
+
+/* Extra small devices */
+@media (max-width: 575px) {
+  .tentang .container,
+  .layanan .container,
+  .koleksi .container {
+    padding: 20px 10px !important;
   }
 
   .jumbotron .display-4 {
-    font-size: 40px;
+    font-size: 28px;
+    margin-top: 60px;
   }
 
-  .tentang .lead {
-    font-size: 15px;
+  .jumbotron .lead {
+    font-size: 12px;
+  }
+}
+
+/* tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+  .tentang .container,
+  .layanan .container,
+  .koleksi .container {
+    padding: 50px 30px;
+  }
+
+  #kontak .container {
+    padding: 50px 30px;
+  }
+
+  .jumbotron .display-4 {
+    margin-top: 100px;
+    font-size: 45px;
+  }
+
+  .form-control-lg {
+    font-size: 1.15rem;
+    padding: 16px 22px;
+    min-height: 58px;
+  }
+
+  .form-control.h-100 {
+    min-height: 250px !important;
+  }
+
+  .map-container iframe {
+    min-height: 350px !important;
+  }
+}
+
+/* phone */
+@media (max-width: 767px) {
+  /* Container padding untuk mobile */
+  .tentang .container,
+  .layanan .container,
+  .koleksi .container {
+    padding: 40px 15px !important;
+  }
+
+  /* Contact section mobile */
+  #kontak .container {
+    padding: 40px 15px !important;
+  }
+
+  .jumbotron .lead {
+    font-size: 14px;
     font-weight: 100;
+    text-align: center;
+    padding: 0 10px;
   }
 
-  .layanan .layanan-card {
-    gap: 10px;
+  .jumbotron .display-4 {
+    font-size: 35px;
+    margin-top: 70px;
+    padding: 0 10px;
   }
 
-  .layanan .card {
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2) !important;
-  }
-  .koleksi .row {
-    gap: 20px;
-  }
-  /* tentang */
   .tentang .lead {
+    font-size: 16px;
+    font-weight: 100;
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
   }
 
-  /* tim */
-  .tim {
-    margin-top: 100px;
+  .layanan .card {
+    margin: 0 10px;
   }
+
+  .layanan .card {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .layanan .card {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2) !important;
+    height: 100%;
+  }
+
+  /* Koleksi mobile fix */
+  .koleksi .card {
+    margin: 0 10px;
+  }
+
+  .koleksi .card {
+    padding: 0 -10px;
+    margin-bottom: 20px;
+  }
+
+  .koleksi .card {
+    height: 100%;
+  }
+
+  /* Kurangi jarak antar elemen */
+  .mb-3 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .mb-3.mb-md-5 {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Input size mobile */
+  .form-control-lg {
+    font-size: 1rem;
+    padding: 15px 15px;
+    min-height: 50px;
+  }
+
+  .form-control.h-100 {
+    min-height: 100px !important;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .map-container iframe {
+    min-height: 200px !important;
+    height: 300px !important;
+  }
+
+  /* Kurangi padding container */
+  .p-3 {
+    padding: 1rem !important;
+  }
+
+  /* Jarak gap lebih kecil */
+  .g-2 {
+    --bs-gutter-x: 0.5rem;
+    --bs-gutter-y: 0.5rem;
+  }
+
+  /* Margin top map lebih kecil */
+  .mt-3 {
+    margin-top: 0.75rem !important;
+  }
+}
+
+/* Styling tambahan */
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* Navbar mobile */
+.navbar-nav {
+  text-align: center;
 }

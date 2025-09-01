@@ -55,7 +55,8 @@
             <a class="nav-link mx-3" href="#tentang">Tentang</a>
             <a class="nav-link mx-3" href="#layanan">Layanan</a>
             <a class="nav-link mx-3" href="#koleksi">Koleksi</a>
-            <!-- <a class="nav-link mx-3" href="#kontak">Kontak</a> -->
+            <a class="nav-link mx-3" href="#testimoni">Testimoni</a>
+            <a class="nav-link mx-3" href="#kontak">Kontak</a>
           </div>
         </div>
       </div>
@@ -356,12 +357,31 @@
             </h2>
             <div
               id="q1"
-              class="accordion-collapse collapse"
+              class="accordion-collapse collapse show"
               data-bs-parent="#faqAccordion"
             >
               <div class="accordion-body">
-                <i class="bi bi-geo-alt-fill me-2"></i> Jl. Kampus No. 123,
-                Karawang
+                <i class="bi bi-geo-fill"></i> Jl. Kampus No. 123, Karawang<br />
+                <a href="tel:+62211234567"
+                  ><i class="bi bi-telephone-fill"></i> (+62) 123-4567</a
+                ><br />
+
+                <a href="mailto:info@perpustakaan.com"
+                  ><i class="bi bi-envelope-at-fill"></i>
+                  info@perpustakaan.com</a
+                ><br />
+
+                <a href="https://www.perpustakaan.com" target="_blank"
+                  ><i class="bi bi-globe"></i> Website Resmi</a
+                ><br />
+
+                <a href="https://instagram.com/perpustakaan" target="_blank"
+                  ><i class="bi bi-instagram"></i> Instagram</a
+                ><br />
+
+                <a href="https://facebook.com/perpustakaan" target="_blank"
+                  ><i class="bi bi-facebook"></i> Facebook</a
+                >
               </div>
             </div>
           </div>
@@ -411,38 +431,71 @@
     </section>
 
     <!-- Kontak -->
-    <section id="kontak" class="py-5 bg-secondary text-light">
-      <div class="container">
-        <h2 class="fw-bold text-center mb-4">Kontak Kami</h2>
-        <div class="row">
-          <div class="col-md-6 p-3">
-            <form>
-              <div class="mb-4">
-                <input type="text" class="form-control" placeholder="Nama" />
-              </div>
-              <div class="mb-4">
-                <input type="email" class="form-control" placeholder="Email" />
-              </div>
-              <div class="mb-4">
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Pesan"
-                ></textarea>
-              </div>
-              <button class="btn btn-primary mb-4">Kirim</button>
-            </form>
+    <section id="kontak" class="py-5 bg-secondary text-light kontak">
+      <div class="container container-fluid px-2 px-md-4 px-lg-5">
+        <h2 class="fw-bold text-center mb-3 mb-md-5">Kontak Kami</h2>
+        <div class="row g-2 g-md-4" style="min-height: 500px">
+          <!-- Form Section -->
+          <div class="col-12 col-md-7 col-lg-8">
+            <div
+              class="bg-dark bg-opacity-25 p-3 p-md-4 p-lg-5 rounded-3 h-100"
+            >
+              <form class="h-100 d-flex flex-column">
+                <!-- Input Row - Responsive Layout -->
+                <div class="row g-2 g-md-3 g-lg-4 mb-3 mb-md-4">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg py-3"
+                      placeholder="Nama Lengkap"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg py-3"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <input
+                      type="tel"
+                      class="form-control form-control-lg py-3"
+                      placeholder="Nomor Telepon"
+                    />
+                  </div>
+                </div>
+                <!-- Textarea -->
+                <div class="mb-3 mb-md-4 flex-grow-1">
+                  <textarea
+                    class="form-control h-100"
+                    placeholder="Tulis pesan Anda di sini..."
+                    style="min-height: 120px; resize: none"
+                  ></textarea>
+                </div>
+                <!-- Button -->
+                <div class="mt-auto">
+                  <button class="btn btn-primary btn-lg w-100 py-3">
+                    <i class="bi bi-send me-2"></i>Kirim Pesan
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="col-md-6 p-3">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.513564554502!2d107.29571037475127!3d-6.298535593690588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977ed285e85f7%3A0xd5f67b79320f3306!2sPerpustakaan%20Umum%20Kabupaten%20Karawang!5e1!3m2!1sid!2sid!4v1756403466571!5m2!1sid!2sid"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+
+          <!-- Map Section -->
+          <div class="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
+            <div class="map-container h-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.513564554502!2d107.29571037475127!3d-6.298535593690588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977ed285e85f7%3A0xd5f67b79320f3306!2sPerpustakaan%20Umum%20Kabupaten%20Karawang!5e1!3m2!1sid!2sid!4v1756403466571!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
