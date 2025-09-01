@@ -1,10 +1,11 @@
-/* body {
-  min-height: 2000px;
-} */
-
+html {
+  scroll-padding-top: 90px;
+}
+/* navbar */
 .navbar .navbar-brand {
   font-family: "Viga", sans-serif;
   font-weight: 300;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .navbar .navbar-nav {
@@ -12,36 +13,34 @@
   font-size: 20px;
 }
 
+/* jumbotron */
 .jumbotron {
-  background-image: url(../img/jumbotron.png);
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  background-position: center;
+  height: 80vh;
   text-align: center;
   position: relative;
+  transition: background-image 1s ease-in-out;
 }
 
 .jumbotron .container {
-  position: sticky;
-  top: 40%; /* posisinya tetap di tengah saat scroll */
+  position: relative;
+  top: 20%; /* posisinya tetap di tengah saat scroll */
   text-align: center;
   color: white;
-  z-index: 2;
+  z-index: 1;
 }
 
 .jumbotron::after {
   content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0)
   );
-  position: absolute;
-  bottom: 0;
 }
 
 .jumbotron .display-4 {
@@ -55,7 +54,7 @@
 
 .jumbotron .lead {
   color: white;
-  font-weight: 100;
+  font-weight: 200;
   letter-spacing: 2px;
 }
 
@@ -66,7 +65,118 @@
 }
 
 /* layanan */
+/* .layanan.container {
+  padding: 100px;
+} */
 .layanan-title {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.layanan .card {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5) !important;
+  transition: transform 0.3s ease;
+}
+
+.layanan .card:hover {
+  transform: translateY(-10px);
+}
+
+.koleksi img {
+  /* width: 100%; */
+  height: 50%;
+}
+
+.tentang h2,
+.layanan h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+/* tentang */
+.tentang .lead {
+  text-align: center;
+}
+
+/* koleksi */
+.koleksi .card {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.558);
+}
+.koleksi .card {
+  transition: transform 0.3s ease;
+}
+
+.koleksi .card:hover {
+  transform: scale(1.05);
+}
+
+.koleksi h6 {
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+/* tim */
+.tim {
+  margin-top: 80px;
+}
+/* destop */
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    position: relative;
+    color: white;
+    font-weight: 600;
+  }
+
+  .navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+
+  .navbar .nav-link:hover::after {
+    width: 100%;
+  }
+}
+/* phone */
+@media (max-width: 747px) {
+  .jumbotron .lead {
+    font-size: 10px;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  .jumbotron .display-4 {
+    font-size: 40px;
+  }
+
+  .tentang .lead {
+    font-size: 15px;
+    font-weight: 100;
+  }
+
+  .layanan .layanan-card {
+    gap: 10px;
+  }
+
+  .layanan .card {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+  .koleksi .row {
+    gap: 20px;
+  }
+  /* tentang */
+  .tentang .lead {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  /* tim */
+  .tim {
+    margin-top: 100px;
+  }
 }
